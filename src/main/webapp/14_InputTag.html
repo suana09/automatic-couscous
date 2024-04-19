@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_InputTag.html</title>
+</head>
+<body>
+
+    <p style="text-align: center;">InputTag</p>
+    <hr><br>
+
+    <!--
+        input(type) tag 는 사용자로 부터 각 정보를 입력 받을 수 있는 입력란 태그들을 지칭합니다. 그들은 흔히 회원 가입시 볼수 있는 아이디 입력란,패스워드 입력란, 성별 선택란 등 이 있으며 한 그룹으로 묶어서
+        다루어 집니다. 그 한그룹은 form 태그에 의해 구분됩니다
+    -->
+
+    <!-- 
+        input : 입력란 태그의 이름. 단일태그이다
+        텍스트입력란도 체크박스도 모두 input 태그로 표시함
+        그룹을 종류별로 구분하는 속성이 type 이며, 이 속성에 종류를 써서 구분함
+    -->
+
+    <!-- form 태그는 하나의 주제를 갖고 입력하는 다수의 입력란들을 하나의 그룹으로 묶어주는 태그 -->
+    <form action="">
+    
+    <!-- 서버가 전송받은 데이터들의 용도를 구분하기 위하여 name 속성을 이용 -->
+    <!-- 각 태그들을 구분하기 위한 속성으로 name, id, class가 있음. 각자 주로 사용되는 용도가 있지만 구분없이 사용되기도 함 -->
+    <!-- 일반 Text를 입력받을 수 있는 태그 -->
+    userid : <input type="text" name = "userid"/><br/>
+    name : <input type="text" name = "name"/><br/>
+    <!-- 일반 Text를 비밀번호 입력받듯 입력받을 수 있는 태그 -->
+    password : <input type="password" name = "pw"/><br/>
+    
+
+    </br>
+    <hr><br>
+
+    checkbox <br><br>
+    <!-- 체크박스 -->
+    스포츠 <input type="checkbox" name="hobby" value="1"/>
+    영화 <input type="checkbox" name="hobby" value="2">
+    독서 <input type="checkbox" name="hobby" value="3"/>
+    기타 <input type="checkbox" name="hobby" value="4" checked>
+    
+
+    <!-- 서버에 저장되는 것은 value 값 -->
+
+
+    <br><br><hr><br><br>
+
+    <!-- 라디오 버튼 : 체크박스와 비슷하지만 그룹 중 하나만 선택이 가능한 선택 버튼 (복수선택 불가) -->
+    남자 <input type="radio" name="gender" value="n">
+    여자 <input type="radio" name="gender" value="f">
+    선택안함 <input type="radio" name="gender" value="n" checked>
+
+    <br><br><hr><br><br>
+
+
+    <!-- 펼침 목록 ComboBox -->
+    <select name="food">
+        <option value="0">선택안함</option>
+        <option value="1">김밥</option>
+        <option value="2">떡볶이</option>
+        <option value="3">튀김</option>
+        <option value="4">순대</option>
+
+
+    </select>
+    <hr><br>
+
+    <!-- 파일 입력 양식 생성 : value 로는 선택한 파일이 전달됨 -->
+    파일 : <input type="file" name="selectfile"><hr>
+
+
+    <!-- 버튼 생성 -->
+    <!-- 단순 일반 버튼 : 모든 영역에서 기능이 발휘됨 -->
+    <input type="button" value="버튼"><hr>
+
+    <!-- 모든 입력을 완료하고 전송하여 마무리하는 태그 -->
+    <input type="submit" value="회원가입"><hr>
+    
+    <!-- 보이지 않는 입력란 : 화면에서 입력받거나 표시되지 않지만 서버에 같이 전송되어야할 데이터들을 hidden 태크를 이용하여 숨겨놓고 전송시 같이 전송되게 합니다....-->
+    <input type="hidden" name="username" value="홍길동">
+    <!-- name 과 value 만 있고 형체가 없는 입력란이며, 입력란이라기 보다 저장데이터로 많이 사용합니다 -->
+    </form>
+
+</body>
+</html>
